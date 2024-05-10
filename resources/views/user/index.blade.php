@@ -139,7 +139,7 @@
                                     </form>
                                 </td>
                         </tr> @empty <tr>
-                                <td>data empity</td>
+                                <td>data empty</td>
                             </tr>
                         @endforelse
                     </tbody>

@@ -15,7 +15,9 @@ class TodoController extends Controller
     public function index()
     {
         $todo = Todo::where('user_id', auth()->user()->id)->get();
-        return view('user.index', compact('todo'));
+        return view('user.index', compact(
+            'todo'
+        ));
     }
 
     /**
@@ -86,7 +88,7 @@ class TodoController extends Controller
      */
     public function destroy(string $id)
     {
-        $todo = todo::findOrFail($id);
+        $todo = Todo::findOrFail($id);
         $todo->delete();
 
         return redirect()->back()->with('succes', 'the list hass been created');
